@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook — Вход</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f2f5;
+      color: #1c1e21;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .fb-wrap {
+      width: min(980px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .fb-left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .fb-logo {
+      margin: 0 0 12px;
+      font-size: 56px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #1877f2;
+    }
+
+    .fb-text {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+      max-width: 420px;
+    }
+
+    .fb-right {
+      width: 396px;
+      max-width: 100%;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 14px 12px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .input:focus {
+      border-color: #1877f2;
+      box-shadow: 0 0 0 2px rgba(24,119,242,0.15);
+    }
+
+    .btn {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .btn-login:hover { filter: brightness(0.96); }
+
+    .link-center {
+      display: block;
+      text-align: center;
+      margin: 12px 0 14px;
+      color: #1877f2;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .link-center:hover { text-decoration: underline; }
+
+    .divider {
+      height: 1px;
+      background: #dadde1;
+      margin: 10px 0 14px;
+    }
+
+    .btn-create {
+      background: #42b72a;
+      color: #fff;
+      width: auto;
+      display: inline-block;
+      padding: 12px 16px;
+      margin: 0 auto;
+    }
+
+    .btn-create:hover { filter: brightness(0.96); }
+
+    .create-wrap {
+      text-align: center;
+    }
+
+    .below {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 12px;
+      color: #1c1e21;
+    }
+
+    .below a {
+      color: #1c1e21;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .below a:hover { text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .fb-wrap {
+        flex-direction: column;
+        text-align: center;
+      }
+      .fb-text { margin: 0 auto; }
+      .fb-left { margin-bottom: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="fb-wrap" aria-label="Facebook login layout">
+      <div class="fb-left">
+        <h1 class="fb-logo">facebook</h1>
+        <p class="fb-text">
+          Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.
+        </p>
+      </div>
+
+      <div class="fb-right">
+        <article class="card" aria-label="Login card">
+          <form action="#" method="post">
+            <div class="field">
+              <label class="sr-only" for="fb-login">Электронный адрес или номер телефона</label>
+              <input class="input" id="fb-login" name="login" type="text"
+                     placeholder="Электронный адрес или номер телефона" required />
+            </div>
+
+            <div class="field">
+              <label class="sr-only" for="fb-pass">Пароль</label>
+              <input class="input" id="fb-pass" name="password" type="password"
+                     placeholder="Пароль" required />
+            </div>
+
+            <button class="btn btn-login" type="submit">Вход</button>
+
+            <a class="link-center" href="#">Забыли пароль?</a>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <div class="create-wrap">
+              <a class="btn btn-create" href="#">Создать новый аккаунт</a>
+            </div>
+          </form>
+        </article>
+
+        <p class="below">
+          <a href="#">Создать Страницу</a> знаменитости, музыкальной группы или компании.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
